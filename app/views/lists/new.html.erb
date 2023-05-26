@@ -1,11 +1,21 @@
 
 <div class="container p-5">
-    <h1>Create new list</h1>
+  <h1>Create new list</h1>
 
-    <%= simple_form_for @list do |f| %>
-    <%= f.input :name %>
-    <%= f.submit %>
-    <% end %>
+  <%= simple_form_for @list, html: { class: 'form-horizontal' } do |f| %>
+    <div class="form-group">
+      <%= f.label :name, class: 'col-sm-2 control-label' %>
+      <div class="col-sm-10">
+        <%= f.text_field :name, class: 'form-control' %>
+      </div>
+    </div>
 
-    <button ><%= link_to "back", lists_path %></button>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <%= f.submit 'Create List', class: 'btn btn-primary' %>
+      </div>
+    </div>
+  <% end %>
+
+  <button class="btn btn-secondary"><%= link_to 'Back', lists_path %></button>
 </div>
