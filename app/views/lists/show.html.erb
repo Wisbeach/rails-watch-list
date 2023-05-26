@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container p-5">
   <h1><%= @list.name %></h1>
   <% @list.movies.each do |movie| %>
   <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
@@ -9,12 +9,12 @@
       Rating: <%= movie.rating %>
       <br>
       Bookmark comment: <%= bookmark.comment %>
-      <%= link_to "delete", bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove #{movie.title} from your #{@list.name} list"}, class: 'text-danger'%>
+      <%= link_to "delete", bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove #{movie.title} from your #{@list.name} list"}, class: 'text-danger' %>
 
     </div>
   <%= image_tag movie.poster_url, alt: movie.title, width: 300 %>
   </div>
   <% end %>
-  <%# <%= link_to "back", lists_path  class: 'btn btn-primary'%> %>
+  <%= link_to "back", lists_path %>
 <%= link_to "Create a new bookmark", new_list_bookmark_path(@list) %>
 </div>
