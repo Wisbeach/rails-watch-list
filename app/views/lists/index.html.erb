@@ -1,11 +1,18 @@
-<div class="container p-5">
-  <h1>Your lists</h1>
-  <ul class="list-group">
-    <% @lists.each do |list| %>
-      <li class="list-group-item">
-        <%= link_to list.name, list_path(list) %>
-      </li>
-    <% end %>
-  </ul>
-  <%= link_to "Create a new list!", new_list_path, class: "btn btn-primary mt-3" %>
+<div class="container p-5" >
+  <h1>Welcome to Film List Maker</h1>
+  <h2>Your lists</h2>
+  <div class="card">
+    <ul class="list-group list-group-flush">
+      <% @lists.each do |list| %>
+        <li class="list-group-item d-flex justify-content-between align-items-center bg-light">
+          <div class="card-body">
+               <%= link_to list.name, list_path(list), class: "text-dark no-underline", style: "text-decoration: none; font-weight: bold; font-size: 20px; display: inline-block; padding: 5px 10px; border-radius: 5px; background-color: lightgray;" %>
+          <div class="card-body">
+
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <%= link_to "Create a new list!", new_list_path, class: "btn btn-primary mt-3 btn-lg" %>
 </div>

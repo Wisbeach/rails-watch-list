@@ -1,0 +1,88 @@
+.btn-half-size {
+  padding: 0.15rem 0.3rem;
+  font-size: 0.6rem;
+}
+
+  .container {
+
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #080202;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+
+  }
+
+  h1 {
+    color: #fbfafa;
+    font-weight: bold;
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    color: #fbfafa;
+    font-size: 24px;
+  }
+
+  .form-group {
+    margin-bottom: 30px;
+  }
+
+  .custom-select {
+    margin-top: 20px;
+  }
+
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+
+  .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+  }
+
+  .btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+  }
+
+  .card {
+    width: 400px;
+    height: 444px;
+    margin-bottom: 20px;
+  }
+
+   .card-text {
+    padding: 15px;
+  }
+
+  .custom-link {
+    text-decoration: none;
+  }
+
+  /* Set background image for each box */
+  .custom-card-body {
+
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Set background image for the container */
+  .container {
+
+    background-size: cover;
+    background-position: center;
+  }

@@ -11,6 +11,7 @@ class BookmarksController < ApplicationController
     if @bookmark.save
       redirect_to list_path(@list)
     else
+      puts @bookmark.errors.full_messages  # Print the errors to the console for debugging
       render 'new', status: :unprocessable_entity
     end
   end

@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>List of Movies</h1>
+  <ul>
+    <% @movies.each do |movie| %>
+      <li>
+        <%= movie.title %> - <%= movie.overview %>
+        <br>
+        Poster URL: <%= movie.poster_url %>
+      </li>
+    <% end %>
+  </ul>
+</div>
